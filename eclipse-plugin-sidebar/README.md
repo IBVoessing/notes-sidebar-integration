@@ -14,6 +14,7 @@ This is a guide on how to create an Eclipse RCP Plugin that displays any web app
     - [Feature Project](#feature-project)
     - [Update Site Project](#update-site-project)
 - [Import the Plugin into HCL Notes](#import-the-plugin-into-hcl-notes)
+- [Deployment: Add to Widget Catalog](#deployment-add-to-widget-catalog)
 
 
 ## Prerequisites
@@ -208,3 +209,20 @@ At this point you have created the necessary projects in Eclipse and built the u
 > Always clean previous plugin builds from your update site before you install a new version. Otherwise the plugin might not update correctly and you will loose your sanity while trying to debug issues.
 >
 > Speaking of debugging: I have not found a way to attach the Eclipse debugger to the Notes Client. If you know how to do that please let me know. You can however use the `System.out.println()` method. The output can be found under `Help` -> `Support` -> `View Trace` inside the Notes Client. You have to painfully search for your output in the trace tho :^)
+
+## Deployment: Add to Widget Catalog
+
+After building the plugin you will have an update site. This contains a `site.xml` file and a `features` folder. To deploy this plugin to users easily you can distribute it via the `Widget Catalog` in HCL Notes.
+
+Steps: 
+- Import the local update site into an .nsf based updatesite:
+  - Open the `Widget Update Site` database on your Domino Server
+  - Press on `Import Local Update Site` and select the `site.xml` file from the update site project you just build
+- Add the plugin to the `Widget Catalog`:
+  - In the Notes Client (sidebar) `My Widgets` -> `Right click on the Menu icon` -> `Configure a Widget from...` -> `Features and Plugins on a Updatesite`
+  - In the popup enter the following URL: `https://.../your_update_site.nsf/site.xml`
+  - Select the plugin you want to add and press `Finish`
+  - The plugin should now be available in the `My Widgets` section of the Notes Client
+  - Right click on the plugin and press `Publish to Catalog`
+  - Fill out the form and you are done
+

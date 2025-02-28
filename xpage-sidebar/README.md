@@ -13,6 +13,7 @@ This approach leverages an xPage as a host for a modern React application via an
   - [5. Build the React app for production](#5-build-the-react-app-for-production)
   - [6. Create an xPage in HCL Domino Designer](#6-create-an-xpage-in-hcl-domino-designer)
   - [7. Display the xPage in the Notes Sidebar](#7-display-the-xpage-in-the-notes-sidebar)
+- [Deployment: Add to Widget Catalog](#deployment-add-to-widget-catalog)
 
 
 ## Prerequisites
@@ -178,3 +179,15 @@ To display the xPage in the Notes Sidebar, you can follow these steps:
 > - Handling advanced CSS features or animations
 >
 > Consider these limitations when deciding if this approach meets your integration requirements or if the Eclipse RCP Plugin alternative might be more suitable for your use case.
+
+
+## Deployment: Add to Widget Catalog
+
+To add the xPage to the Widget Catalog, you can follow these steps:
+1. Open the `My Widgets` tab in the sidebar panel
+2. Right click on the xPage you have added as a panel in the previous step
+3. Select `Publish to Catalog`
+4. Fill out the necessary information and save the form
+5. The xPage should now be available in the Widget Catalog
+
+![alt text](/images/notes-widget-catalog.png)
