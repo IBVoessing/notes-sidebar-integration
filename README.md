@@ -34,4 +34,4 @@ This method uses an Eclipse RCP Plugin with a WebView component to host any mode
 - Access to Notes data and context
 - Integration via an UpdateSite as a sidebar panel
 
-[View the Eclipse RCP Plugin Sidebar documentation](/eclipse-rcp-plugin-sidebar/README.md)
+[View the Eclipse RCP Plugin Sidebar documentation](/eclipse-plugin-sidebar/README.md)
