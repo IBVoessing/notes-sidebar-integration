@@ -70,7 +70,7 @@ The following steps will guide you through the creation of these projects.
 
 ### Shortcut
 
-If you don´t want to setup the projects yourself just use the provided projects which are bundeld in the `open-ntf-plugin.zip`. You can import the projects into your workspace and start from there. Therfore just `Import` -> `Existing Projects into Workspace` -> ...
+If you don´t want to setup the projects yourself just use the provided projects which can be found in the `open-ntf-plugin` directory. You can import the projects into your workspace and start from there. Therfore just `Import` -> `Existing Projects into Workspace` -> ...
 
 However you still need to complete the previous steps to make sure that your Eclipse is set up correctly.
 

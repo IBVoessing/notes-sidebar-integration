@@ -1,0 +1,14 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: Open-ntf-sidebar
+Bundle-SymbolicName: open-ntf-sidebar;singleton:=true
+Bundle-Version: 1.0.0.qualifier
+Bundle-Activator: open_ntf_sidebar.Activator
+Require-Bundle: org.eclipse.ui,
+ org.eclipse.core.runtime,
+ org.eclipse.ui.views,
+ org.eclipse.core.expressions,
+ com.ibm.rcp.ui
+Bundle-RequiredExecutionEnvironment: JavaSE-17
+Automatic-Module-Name: open.ntf.sidebar
+Bundle-ActivationPolicy: lazy

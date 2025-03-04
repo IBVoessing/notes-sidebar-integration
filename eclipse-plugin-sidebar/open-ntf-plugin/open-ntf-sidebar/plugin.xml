@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+   <extension
+         point="org.eclipse.ui.views">
+      <view
+            class="open_ntf_sidebar.Sidebar"
+            id="open-ntf-sidebar.view1"
+            name="name"
+            restorable="true">
+      </view>
+   </extension>
+   <extension
+         point="com.ibm.rcp.ui.shelfViews">
+      <shelfView
+            id="open-ntf-sidebar.shelfView"
+            region="TOP"
+            showTitle="true"
+            view="open-ntf-sidebar.view1">
+      </shelfView>
+   </extension>
+
+</plugin>
