@@ -203,7 +203,23 @@ At this point you have created the necessary projects in Eclipse and built the u
 ![alt text](/images/notes-plugin-sidebar.png)
 
 >[!IMPORTANT]
-> Here you can see the limitation of using the `Browser` widget powered by Microsofts WebView2. The widget is not able to display the web application correctly when DPI scaling is enabled (the display setting is not set to 100%). This is a known issue and there is no fix for it at the moment. To fix that you would need to write your own or buy a Chromium based browser widget. Companys that sell that are [Equo dev](https://www.equo.dev/chromium) and [JXBrowser](https://teamdev.com/jxbrowser/).
+> Here you can see the limitation of using the `Browser` widget powered by Microsofts WebView2. The widget is not able to display the web application correctly when DPI scaling is enabled (the display setting is not set to 100%). This is a known issue.
+>
+> To fix the DPI scaling issue with the `WebView2` engine you need to do the following:
+>
+> Locate the installation folder of the `EdgeWebView` usally this will be `C:\Program Files (x86)\Microsoft\EdgeWebView\Application\<version>`
+>
+> You might have multiple versions installed. You need to apply the fix to all versions. (Applying it to the latest version might do it).
+>
+> 1. Right click on the `msedgewebview2.exe` file and select `Properties`.
+> 2. Go to the `Compatibility` tab and check the `Override high DPI scaling behavior. Scaling performed by:` checkbox.
+> 3. Select `System (Enhanced)` from the dropdown.
+>
+> ![image](../images/dpi_fix.png)
+>
+> You may need to restart your computer for the changes to take effect.
+>
+> This should fix the scaling issue with the `WebView2` engine in the Notes Client.
 
 >[!TIP]
 > Always clean previous plugin builds from your update site before you install a new version. Otherwise the plugin might not update correctly and you will loose your sanity while trying to debug issues.
