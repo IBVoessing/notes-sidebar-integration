@@ -220,6 +220,32 @@ At this point you have created the necessary projects in Eclipse and built the u
 > You may need to restart your computer for the changes to take effect.
 >
 > This should fix the scaling issue with the `WebView2` engine in the Notes Client.
+>
+>  **MacOS Users:**
+>
+> If you are using Parallels Desktop you may need to disable the `Use Retina resolution` option in the Parallels settings for the Windows VM. This can be found under `Configuration` -> `Hardware` -> `Graphics` -> `Use Retina resolution`. Disabling this option will make sure that the DPI scaling is not applied to the Windows VM and the `WebView2` engine will work correctly.
+
+> [!NOTE]
+> Applying the previous fix can lead to issues with other applications that rely on the `Evergreen` Version of the `WebView2` engine.
+>
+> To fix this you can install a `fixed` version of the `WebView2` engine. This will not update automatically and will not cause issues with other applications. You can find the fixed version on the [Microsoft Edge WebView2 Fixed Version](https://developer.microsoft.com/de-de/microsoft-edge/webview2/) page.
+>
+> When downloading the fixed version you will receive a `.cab` file. You will need to extract the contents of the `.cab` file to a folder of your choice.
+>
+> [Microsoft suggest](https://learn.microsoft.com/de-de/microsoft-edge/webview2/concepts/distribution?tabs=dotnetcsharp#details-about-the-fixed-version-runtime-distribution-mode) to extract it using the terminal `expand {path to the package} -F:* {path to the destination folder}` 
+>
+> Dont forget to apply the DPI scaling fix to the `msedgewebview2.exe` file in the extracted folder as well.
+>
+> Now you need to make sure that the Browser widget in your plugin uses the fixed version of the `WebView2` engine. This can be achived by adding the following Code into the `start` method of your `Activator` class of you plugin:
+> ```java
+> System.setProperty("org.eclipse.swt.browser.EdgeDir","C:\\Path\\To\\Your\\Fixed\\WebView2\\Folder\\Containing\\msedgewebview2.exe");
+> 
+> System.setProperty("org.eclipse.swt.browser.EdgeDataDir", "C:\\Path\\To\\Store\\WebView2\\Data");
+> ```
+>
+> This code must be executed before the Browser widget is created. The first line sets the path to the folder containing the `msedgewebview2.exe` file of the fixed version of the `WebView2` engine (e.g. `C:\\HCL\\webview2\\Microsoft.WebView2.FixedVersionRuntime.136.0.3240.92.x64`). The second line sets the path to a folder where the `WebView2` data will be stored. This folder can be any folder you choose.
+>
+> Thats it! Now your plugin should use the fixed version of the `WebView2` engine and the DPI scaling issue should be resolved.
 
 >[!TIP]
 > Always clean previous plugin builds from your update site before you install a new version. Otherwise the plugin might not update correctly and you will loose your sanity while trying to debug issues.
@@ -241,4 +267,3 @@ Steps:
   - The plugin should now be available in the `My Widgets` section of the Notes Client
   - Right click on the plugin and press `Publish to Catalog`
   - Fill out the form and you are done
-
