@@ -203,6 +203,11 @@ At this point you have created the necessary projects in Eclipse and built the u
 ![alt text](/images/notes-plugin-sidebar.png)
 
 >[!IMPORTANT]
+> **Note for HCL Notes 14.5 and above:**
+> As of HCL Notes 14.5, the DPI scaling issues with WebView2 are fixed by default. The following workarounds are only necessary for Notes 14.0 and older versions.
+>
+> ---
+>
 > Here you can see the limitation of using the `Browser` widget powered by Microsofts WebView2. The widget is not able to display the web application correctly when DPI scaling is enabled (the display setting is not set to 100%). This is a known issue.
 >
 > To fix the DPI scaling issue with the `WebView2` engine you need to do the following:

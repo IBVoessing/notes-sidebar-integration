@@ -1,6 +1,16 @@
 <!-- omit in toc -->
 # xPage Sidebar
 
+> [!IMPORTANT]  
+> `Notes 14.5+` uses [WebView2-Runtime](https://developer.microsoft.com/de-de/microsoft-edge/webview2) for web content, greatly improving modern web compatibility.
+>
+> The xPage Sidebar now supports any modern web app (React, Angular, Vue.js) without ES5 transpilation or JavaScript polyfills.
+>
+> For `Notes 14.5+` you can skip: 
+>  - Step 2: Install the legacy plugin
+>  - Step 3: Configure the legacy plugin
+>  - Steps 4 & 5: For development, you can simply run `npx vite --host` which starts a development server with hot module replacement. No need to build the app each time you make changes. For production, you can still follow Step 5 to create an optimized build.
+
 This approach leverages an xPage as a host for a modern React application via an iFrame. The xPage is then configured to appear as a sidebar panel in the Notes Client. To make this work we are using the [@vitejs/plugin-legacy](https://www.npmjs.com/package/@vitejs/plugin-legacy) plugin. This plugin allows us to transpile modern JavaScript code to ES5, which is compatible with the Notes Client's browser engine.
 
 - [Prerequisites](#prerequisites)

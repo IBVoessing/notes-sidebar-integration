@@ -1,12 +1,17 @@
 # HCL Notes Sidebar Integrations
 
+> [!IMPORTANT]  
+> `Notes 14.5+` uses [WebView2-Runtime](https://developer.microsoft.com/de-de/microsoft-edge/webview2) for web content, greatly improving modern web compatibility.
+>
+> The xPage Sidebar now supports any modern web app (React, Angular, Vue.js) without ES5 transpilation or JavaScript polyfills.
+ 
 ## Overview
 
 This repository contains two ways for creating sidebar integrations for the HCL Notes Client.
 
 ## Challange
 
-HCL Notes utilizes an outdated browser engine (`Mozilla/5.0 (Windows NT 6.2; WOW64; rv:43.0) Gecko/20100101 /43.0.4` from approximately `2011`) to render web content. 
+HCL Notes `Version 14` utilizes an outdated browser engine (`Mozilla/5.0 (Windows NT 6.2; Win64; x64; rv:45.0) Gecko/20100101 /45.9.0` from approximately `2017`) to render web content. 
 
 This presents significant limitations:
 
