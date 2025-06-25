@@ -152,6 +152,11 @@ public class Sidebar extends ViewPart {
 
 The above code snippet creates a new view in the sidebar of the Notes Client. The view contains a `Browser` widget that displays the Google homepage. You can replace the URL with the URL of your web application.
 
+> [!TIP]
+> Need to interact with the Notes Client? Check the [advanced tutorial](./advanced-plugin/README.md) to learn how to:
+> - Read the current Notes Client context
+> - Exchange data between your plugin and web application
+
 > [!NOTE]
 > This needs to be the class that you set in the `class` field of the `View` in the `Extensions` tab of the `MANIFEST.MF`. Be sure that the class extends `ViewPart`.
 

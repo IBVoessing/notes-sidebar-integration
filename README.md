@@ -40,3 +40,15 @@ This method uses an Eclipse RCP Plugin with a WebView component to host any mode
 - Integration via an UpdateSite as a sidebar panel
 
 [View the Eclipse RCP Plugin Sidebar documentation](/eclipse-plugin-sidebar/README.md)
+
+#### Advanced Integration Features
+
+The Eclipse RCP Plugin approach enables powerful integration capabilities:
+
+- **Access Notes Context**: Retrieve information about currently selected documents
+- **Two-Way Communication**: 
+  - Send data from Notes to your web application
+  - Receive data from your web application back to the plugin
+- **DOM Manipulation**: Directly interact with your web app's interface
+
+[View the Advanced Integration Guide](/eclipse-plugin-sidebar/advanced-plugin/README.md)
