@@ -3,7 +3,7 @@
 
 This guide demonstrates how to create advanced integrations between your Eclipse RCP Plugin and the HCL Notes Client. Learn to access the Notes context and establish two-way communication between your plugin and its embedded web application.
 
-![](../../images/advanced-plugin-overview.png)
+![](../../images/advanced-plugin-sketch.png)
 
 Before diving into these advanced techniques, ensure you've completed the [basic setup instructions](../README.md) to create a functioning Eclipse RCP Plugin with a WebView component.
 
